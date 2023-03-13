@@ -11,7 +11,7 @@ function App() {
 
   const wheather = async () => {
     try {
-      const api = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=d8a85ca6485d4aa8a71142737231303&q=${city}&days=6&aqi=no&alerts=no`)
+      const api = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=d8a85ca6485d4aa8a71142737231303&q=${city}&days=6&aqi=no&alerts=no`)
       const resp = await api.json()
       setData( resp) 
     } catch (error) {
