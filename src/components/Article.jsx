@@ -3,7 +3,7 @@ import { nombreDelDiaSegunFecha } from "../day";
 
 export function Article({ data }) {
   return (
-    <article className="wheather w-[30%] min-h-screen flex justify-center items-center max-[700px]:w-full">
+    <aside className="wheather w-[30%] min-h-screen flex justify-center items-center max-[700px]:w-full">
       <div className="flex flex-col items-center h-[550px] justify-between">
         <img className="w-[250px]" alt="" src={data?.current.condition.icon} />
         <h1 className="text-center text-[70px] relative">
@@ -29,6 +29,6 @@ export function Article({ data }) {
           {data?.location.country} - {data?.location.name}
         </h6>
       </div>
-    </article>
+    </aside>
   );
 }

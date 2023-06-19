@@ -1,10 +1,17 @@
 import { ImSearch } from 'react-icons/im'
 
-export function Form({setCity, handleSubmit}) {
+export function Form({ setCity, searchCity }) {
 
-    const handleCity=(e)=>{
-        setCity(e.target.value)
-      }
+  const handleCity=(e)=>{
+    if(e.target.value !== ''){
+      setCity(e.target.value)
+    }
+  }
+
+  function handleSubmit(e){
+    e.preventDefault()
+    searchCity()
+  }
 
   return (
     <form onSubmit={handleSubmit} className="w-[400px] flex max-[445px]:w-full">
